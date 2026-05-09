@@ -19,10 +19,10 @@ function Note({note, onSave}){
                 <div className="note-options">
                     <button className="span">Delete</button>
                     <button className="span">Copy</button>
-                    <button className="span" onClick={onSave(text)}>Save</button>
+                    <button className="span" onClick={()=>{onSave(text)}}>Save</button>
                 </div>
 
-                <textarea name="" className="text-area" onChange={(e) => setText(e.target.value)}>
+                <textarea name="" className="text-area" value={text} onChange={(e) => setText(e.target.value)}>
                 </textarea>
             </div>
         </>
