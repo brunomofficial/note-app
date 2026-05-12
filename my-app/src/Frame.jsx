@@ -46,6 +46,14 @@ function Frame(){
         setActiveIndex(notes.length);
     } 
 
+    const deleteNote = (index) => {
+        const updateNotes = notes.filter((_,i) => i !== index);
+
+        setNotes(updateNotes);
+
+        setActiveIndex(null);
+    }
+
 
     return(
         <>
@@ -61,13 +69,15 @@ function Frame(){
                         <NoteList notes={notes}
                         onSelectNote = {setActiveIndex}
                         onAddNote = {addNote}
+                        onDeleteNote = {deleteNote}
                         ></NoteList>
                     </div>
 
                     <span id="note-display-lbl">Edit Note</span>
                     <div className="note-display">
                         <Note note={activeNote}
-                        onSave = {saveNoteContent}/>
+                        onSave = {saveNoteContent}
+                        onDelete={()=>{deleteNote(activeIndex)}}/>
                     </div>
                 </div>
                 

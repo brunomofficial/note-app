@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function Note({note, onSave}){
+function Note({note, onSave, onDelete}){
  
     const [text, setText] = useState("");
 
@@ -9,7 +9,7 @@ function Note({note, onSave}){
     }, [note]);
 
     if(!note) return <div className="note">
-        Select a note to edit
+        <span className="no-note-msg">Select a note to edit or add a new note</span>
     </div>
 
     return(
@@ -17,8 +17,7 @@ function Note({note, onSave}){
             <div className="note">
 
                 <div className="note-options">
-                    <button className="span">Delete</button>
-                    <button className="span">Copy</button>
+                    <button className="span" onClick={onDelete}>Delete</button>
                     <button className="span" onClick={()=>{onSave(text)}}>Save</button>
                 </div>
 

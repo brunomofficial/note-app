@@ -4,8 +4,11 @@ function NoteAsLi(props){
             <div className="note-as-li">
                 <div className="note-content">{props.noteContent}</div>
                 <div className="note-as-li-btns">
-                    <button>edit</button>
-                    <button class="del-li-note">del</button>
+                    <button className="del-li-note"
+                    onClick={(e)=>{
+                        e.stopPropagation();
+                        props.onDelete();
+                    }}>del</button>
                 </div>
                 <div className="date-created">
                     {props.dateCreated}

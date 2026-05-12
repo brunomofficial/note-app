@@ -1,6 +1,6 @@
 import NoteAsLi from "./NoteAsLi";
 
-function NoteList({notes, onSelectNote, onAddNote}) {
+function NoteList({notes, onSelectNote, onAddNote, onDeleteNote}) {
  
   return (
     <>
@@ -14,7 +14,10 @@ function NoteList({notes, onSelectNote, onAddNote}) {
                   notes.map((note, index) =>
                      (
                       <div key={index} onClick={()=>onSelectNote(index)}>
-                        <NoteAsLi noteContent={note.content} dateCreated={note.date}>
+                        <NoteAsLi noteContent={note.content} 
+                        dateCreated={note.date}
+                        onDelete={() => onDeleteNote(index)}
+                        >
                     
                         </NoteAsLi>
 

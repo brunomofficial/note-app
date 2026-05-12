@@ -2,6 +2,10 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+button{
+  cursor: pointer;
+}
+
 html{
   height: 100vh;
   width: 100vw;
@@ -81,6 +85,10 @@ html{
   transform: scale(1.1);
 }
 
+.new-note-btn:active{
+  transform: scale(1);
+}
+
 .all-notes{
   position: absolute;
   left: 10px;
@@ -124,32 +132,45 @@ html{
   display: flex;
   background-color:rgba(11, 97, 167, 0.113);
   border-radius: 10px;
-  width: 90%;
   padding-top: 10px;
-  padding-bottom: 25px;
-  padding-inline: 10px;
+  width: 28vw;
+  padding-inline: 20px;
+  padding-bottom: 40px;
   margin-inline: auto;
   justify-content: space-between;
   margin-block: 10px;
   position: relative;
+  cursor: pointer;
+}
+
+.note-as-li:hover{
+  box-shadow: 2px 2px 2px 2px rgba(7, 91, 175, 0.226);
+}
+
+.note-as-li:active{
+  box-shadow: none;
 }
 
 .note-content{
-
-
+  color: rgb(53, 43, 4);
+  margin-right: 30px;
 }
-.note-as-li-btns button{
+
+.del-li-note{
   border: none;
   color: rgb(43, 86, 226);
   margin-inline: 2px;
+  font-size: 1rem;
 }
 
-.note-as-li-btns button:hover{
-  transform: scale(1.1);
-}
 
 .del-li-note:hover{
+  transform: scale(1.1);
   color: red;
+}
+
+.del-li-note:active{
+  color: rgb(43, 86, 226);
 }
 
 .date-created{
@@ -166,8 +187,8 @@ html{
   border-radius: 40px;
   top: 25px;
   width: 54vw;
-  background-color: rgba(4, 48, 192, 0.513);
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.164);
+  background-color: rgba(3, 32, 124, 0.894);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,6 +208,14 @@ html{
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.no-note-msg{
+  color: rgb(233, 232, 229);
+  align-self: center;
+  font-size: 1.2rem;
+  padding-top: 200px;
 }
 
 .note-options{
@@ -202,6 +231,8 @@ html{
   margin-inline: 5px;
   border-radius: 5px;
   border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(21, 21, 21);
 }
 
 .note-options button:hover{
