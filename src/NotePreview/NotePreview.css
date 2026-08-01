@@ -1,0 +1,63 @@
+.note-preview{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+  margin-block: 10px;
+  cursor: pointer;
+  border-right: 2px solid rgba(9, 9, 173, 0.456);
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.193);
+  margin-inline: 3px;
+  padding-inline: 3px;
+  border-left: 5px solid rgba(18, 59, 135, 0.838);
+  padding-top: 10px;
+  min-height: 70px;
+  justify-content: space-between;
+}
+
+.note-preview:hover {
+  background-color: rgba(255, 255, 255, 0.925);
+}
+
+.note-preview:active{
+  box-shadow: none;
+}
+
+.note-content {
+  color: rgba(0, 0, 0, 0.713);
+  max-height: 50px;
+  overflow-y: hidden;
+  overflow-wrap: break-word;
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+.date-created{
+  font-family: monospace;
+  color: rgba(0, 0, 0, 0.449);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 600px) {
+  .note-preview {
+    display: flex;
+    justify-self: stretch;
+    width: 85%;
+    min-height: 120px;
+    margin-inline: auto;
+  }
+
+  .note-preview:hover {
+    transform: scale(1.01);
+  }
+
+  .note-preview:active {
+    transform: scale(0.99);
+  }
+
+  .note-content {
+    font-size: 1.1rem;
+    max-height: 100px;
+    flex: 1;
+  }
+}

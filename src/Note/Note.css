@@ -1,0 +1,96 @@
+.note{
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.524);
+  justify-content: center;
+  flex: 1;
+  margin-right: 5px;
+  margin-left: 10px;
+  align-items: center;
+  position: relative;
+}
+
+.note-options{
+  display: flex;
+  align-self: flex-end;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.note-options button{
+  font-size: 1rem;
+  font-weight: bold;
+  margin-inline: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.879);
+  transition: transform 0.3s ease;
+}
+
+.note-options button:hover{
+  transform: scale(1.1);
+}
+
+.deleteNoteBtn {
+  color: rgb(183, 5, 5);
+}
+
+.saveNoteBtn {
+  color: rgb(4, 137, 4);
+}
+
+.text-area{
+  flex: 1;
+  align-self: stretch;
+  margin-inline: 5px;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.92);
+  padding: 15px 10px;
+  box-shadow: 2px 2px 15px inset rgba(0, 0, 0, 0.363);
+  overflow-y: scroll;
+  scrollbar-width: none;
+  margin-top: 10px;
+  resize: none;
+  outline: none;
+  margin-bottom: 5px;
+  border: 2px solid rgba(0, 0, 0, 0.315);
+  transition: border-color 0.3s ease;
+}
+
+.text-area:focus, .text-area:active{
+  border-color:rgba(0, 0, 0, 0.75);
+}
+
+.no-note-msg {
+  color: rgb(0, 0, 0);
+  align-self: center;
+  font-size: 1.1rem;
+  padding-top: 200px;
+  position: absolute;
+  top: 0;
+}
+
+.no-note-msg a {
+  text-decoration: underline;
+  cursor: pointer;
+  color: rgb(0, 61, 114);
+}
+
+@media (max-width: 600px) {
+  .note {
+    display: none;
+    transition: all 0.3s ease;
+  }
+
+  .note.visible {
+    display: flex;
+  }
+
+  .note.hidden {
+    display: none;
+  }
+}

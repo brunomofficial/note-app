@@ -1,0 +1,67 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+  cursor: pointer;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  height: 100dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(4, 100, 174);
+}
+
+/*NOTES SECTION*/
+.note-section{
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.backbtn {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  padding: 5px;
+  width: fit-content;
+  border-radius: 5px;
+  border: none;
+  color: rgb(5, 3, 125);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.backbtn:hover {
+  transform: scale(1.05);
+}
+
+.backbtn.visible {
+  display: none;
+}
+
+.backbtn.hidden {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .backbtn.visible {
+    display: flex;
+  }
+
+.backbtn.hidden {
+    display: none;
+  }
+}
